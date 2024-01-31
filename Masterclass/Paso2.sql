@@ -72,9 +72,20 @@ where left (first_name,1) < 'E';
 
 /*
  * OBSERVACIONES
- * Ademas de Left esta Right, ambos extraen la cantidad de letras que se especifique en el segundo parametro
+ * 
+ * Ademas de Left esta Right, ambos extraen la cantidad de letras que se especifique en el segundo parametro:
+ * select right ('Hola Mundo',5);
+ * 
+ * En la práctica, intente siempre devolver las columnas específicas que busca. Use SELECT * con moderación.
+ * 
+ * Tenga en cuenta que LIMIT a veces se implementa como TOP en algunas versiones de bases de datos.
+ * 
+ * Utilizar LIMIT en bases de datos más nuevas, como BigQuery. BQ factura según el número total de filas escaneadas y LIMIT evitará esto.
+ * 
+ * La mejor práctica es aplicar siempre filtros WHERE cuando sea posible para limitar la cantidad de datos que se deben escanear, lo que reduce los costos de consulta y acelera la ejecución de la misma.
  */
-select right ('Hola Mundo',5);
+
+
 
 
 
